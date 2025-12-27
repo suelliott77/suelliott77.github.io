@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #1f2933;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+header .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #1f2933;
+}
+
+ul {
+  list-style: square;
+  margin-left: 1.5rem;
+}
+
+.project {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+#contact a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1f2933;
+  color: white;
+  margin-top: 2rem;
+}
+
