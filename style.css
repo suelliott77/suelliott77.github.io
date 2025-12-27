@@ -64,3 +64,21 @@ footer {
   margin-top: 2rem;
 }
 
+.image-container {
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+
