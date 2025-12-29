@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const AUTO_PLAY_DELAY = 3500; // ms
-
   document.querySelectorAll(".carousel").forEach(carousel => {
     const track = carousel.querySelector(".carousel-track");
     const cards = carousel.querySelectorAll(".carousel-card");
@@ -9,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const dotsContainer = carousel.querySelector(".carousel-dots");
 
     let index = 0;
-    let autoPlayInterval;
 
     /* ---------- CREATE DOTS ---------- */
     cards.forEach((_, i) => {
@@ -20,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       dot.addEventListener("click", () => {
         index = i;
         updateCarousel();
-        restartAutoplay();
       });
 
       dotsContainer.appendChild(dot);
@@ -48,34 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nextBtn.addEventListener("click", () => {
       nextSlide();
-      restartAutoplay();
     });
 
     prevBtn.addEventListener("click", () => {
       prevSlide();
-      restartAutoplay();
     });
-
-    /* ---------- AUTOPLAY ---------- */
-    function startAutoplay() {
-      autoPlayInterval = setInterval(nextSlide, AUTO_PLAY_DELAY);
-    }
-
-    function stopAutoplay() {
-      clearInterval(autoPlayInterval);
-    }
-
-    function restartAutoplay() {
-      stopAutoplay();
-      startAutoplay();
-    }
-
-    /* ---------- PAUSE ON HOVER ---------- */
-    carousel.addEventListener("mouseenter", stopAutoplay);
-    carousel.addEventListener("mouseleave", startAutoplay);
 
     /* ---------- INIT ---------- */
     updateCarousel();
-    startAutoplay();
   });
 });
