@@ -38,8 +38,8 @@ header .btn {
 }
 
 .btn-white {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   border: 1px solid #ccc;
 }
 
@@ -65,6 +65,12 @@ h2 {
   margin-bottom: 1rem;
   color: #1f2933;
 }
+
+h2 i {
+  color: #500000; /* TAMU maroon */
+  margin-right: 0.5rem;
+}
+
 
 ul {
   list-style: square;
