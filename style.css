@@ -47,11 +47,13 @@ header .btn {
 .btn-maroon {
   background: #500000;
   color: white;
+  border: 1px solid #ccc;
 }
 
 .btn-blue-black {
   background: #000080;
   color: white;
+  border: 1px solid #ccc;
 }
 
 section {
