@@ -12,13 +12,20 @@ body {
 }
 
 header {
-  background-image: url('images/tamu_background.jpg');
   background-size: cover;
   background-position: center;
   background-color: #500000;
   color: white;
   padding: 3rem 1rem;
   text-align: center;
+}
+
+.header-bg-tamu {
+  background-image: url('images/tamu_background.jpg');
+}
+
+.header-bg-none {
+  background-image: none;
 }
 
 header .btn {
@@ -29,6 +36,22 @@ header .btn {
   color: white;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.btn-white {
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-maroon {
+  background: #500000;
+  color: white;
+}
+
+.btn-blue-black {
+  background: #000080;
+  color: white;
 }
 
 section {
