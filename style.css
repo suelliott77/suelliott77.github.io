@@ -24,8 +24,8 @@ header {
   background-image: url('images/tamu_background.jpg');
 }
 
-.header-bg-none {
-  background-image: none;
+.header-bg-mountain {
+  background-image: url('images/background1.jpg');
 }
 
 header .btn {
