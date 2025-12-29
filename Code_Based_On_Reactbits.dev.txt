@@ -1,0 +1,145 @@
+This is some other code that I used or was the basis for some of the code within the website
+Many of these ideas from reactbits.dev
+
+HTML:
+<section id="coursework-carousel">
+  <h2>Relevant Coursework</h2>
+
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <div class="carousel-card">
+        <h3>Computer Science</h3>
+        <p>Data Structures, Databases, Software Engineering, Machine Learning</p>
+      </div>
+
+      <div class="carousel-card">
+        <h3>Computer & Electrical Engineering</h3>
+        <p>Digital Systems, Computer Architecture, Microprocessors, Signals</p>
+      </div>
+
+      <div class="carousel-card">
+        <h3>Mathematics Minor</h3>
+        <p>Discrete Math, Differential Equations, Cryptography, Statistics</p>
+      </div>
+
+      <div class="carousel-card">
+        <h3>Physics & Foundations</h3>
+        <p>Electricity & Magnetism, Mechanics, Materials Science</p>
+      </div>
+
+    </div>
+
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+
+    <div class="carousel-dots"></div>
+  </div>
+</section>
+
+CSS:
+.carousel {
+  position: relative;
+  max-width: 700px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-card {
+  min-width: 100%;
+  padding: 2rem;
+  background: #0d0716;
+  border-radius: 12px;
+  border: 1px solid #555;
+  color: white;
+}
+
+.carousel-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #500000;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: -10px;
+}
+
+.carousel-btn.next {
+  right: -10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: white;
+}
+
+JavaScript:
+<script>
+  const track = document.querySelector('.carousel-track');
+  const cards = document.querySelectorAll('.carousel-card');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const dotsContainer = document.querySelector('.carousel-dots');
+
+  let index = 0;
+
+  cards.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  function goToSlide(i) {
+    index = i;
+    updateCarousel();
+  }
+
+  nextBtn.onclick = () => {
+    index = (index + 1) % cards.length;
+    updateCarousel();
+  };
+
+  prevBtn.onclick = () => {
+    index = (index - 1 + cards.length) % cards.length;
+    updateCarousel();
+  };
+</script>

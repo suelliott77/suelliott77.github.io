@@ -40,7 +40,7 @@ header .btn {
 
 .btn-white {
   background: white;
-  color: #333;
+  color: white;
   border: 1px solid #ccc;
 }
 
@@ -82,6 +82,67 @@ ul {
 #contact a {
   color: #3b82f6;
   text-decoration: none;
+}
+/* ===== CAROUSEL ===== */
+
+.carousel {
+  position: relative;
+  max-width: 700px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-card {
+  min-width: 100%;
+  background: #0d0716;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #500000;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  background: #777;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: white;
 }
 
 footer {
