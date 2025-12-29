@@ -26,10 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ---------- CORE UPDATE ---------- */
     function updateCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
+    const slideWidth = carousel.offsetWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
     }
+
 
     /* ---------- CONTROLS ---------- */
     function nextSlide() {
