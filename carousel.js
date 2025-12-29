@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ---------- AUTOPLAY ---------- */
-    function startAutoplay() {
+    /*function startAutoplay() {
       autoPlayInterval = setInterval(nextSlide, AUTO_PLAY_DELAY);
     }
 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function restartAutoplay() {
       stopAutoplay();
       startAutoplay();
-    }
+    }*/
 
     /* ---------- PAUSE ON HOVER ---------- */
     carousel.addEventListener("mouseenter", stopAutoplay);
