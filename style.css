@@ -173,15 +173,19 @@ footer {
 }
 
 .image-container {
+  display: flex;
+  gap: 1rem;
   overflow: hidden;
   border-radius: 8px;
   margin: 0.75rem 0;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .image-container img {
-  width: 100%;
+  flex: 1;
+  max-width: 50%;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .image-container img:hover {
