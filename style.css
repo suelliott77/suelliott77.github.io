@@ -22,8 +22,26 @@ header {
 
 header.header-bg-tamu {
   background-image: url('images/tamu_background.jpg');
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  color: black !important;
+  position: relative;
+}
+
+header.header-bg-tamu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+  z-index: 1;
+}
+
+header.header-bg-tamu h1,
+header.header-bg-tamu p,
+header.header-bg-tamu a {
+  position: relative;
+  z-index: 2;
 }
 
 
