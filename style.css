@@ -22,6 +22,7 @@ header {
 
 .header-bg-tamu {
   background-image: url('images/tamu_background.jpg');
+  color: black;
 }
 
 .header-bg-mountain {
@@ -183,9 +184,9 @@ footer {
 
 .image-container img {
   flex: 1;
-  max-width: 50%;
   border-radius: 6px;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: 300px;
 }
 
 .image-container img:hover {
