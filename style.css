@@ -78,18 +78,8 @@ header .btn {
 
 section {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h2 {
-  margin-bottom: 1rem;
-  color: #1f2933;
-}
-
-h2 i {
-  color: #500000; /* TAMU maroon */
-  margin-right: 0.5rem;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
 }
 
 
@@ -99,10 +89,63 @@ ul {
 }
 
 .project {
-  background: white;
-  padding: 1rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.project h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.project em {
+  display: block;
+  font-style: normal;
+  color: #6b7280;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
-  border-radius: 5px;
+}
+
+.project p {
+  max-width: 750px;
+  margin-bottom: 1rem;
+}
+
+.project ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.project li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #500000;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1f2933;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #500000;
+  margin-top: 0.5rem;
 }
 
 #contact a {
@@ -214,3 +257,94 @@ footer {
 }
 
 
+
+
+/* ===== LAYOUT ENHANCEMENTS ===== */
+
+.header-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+
+
+.btn{
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Backwards-compatible alias used in some pages */
+.btn-black{
+  background: black;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Used on the home page for quick navigation tiles */
+.card{
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1.1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.card h3{
+  margin-bottom: 0.5rem;
+}
+
+.card p{
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+.card a{
+  color: #500000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover{
+  text-decoration: underline;
+}
+
+/* Resume callout (resume_projects.html) */
+.resume-callout{
+  background: white;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.resume-callout-text{
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* Improve link readability globally */
+a{
+  color: #500000;
+}
+
+a:hover{
+  opacity: 0.95;
+}
+
+/* Smoother image hover */
+.image-container img{
+  transition: transform 0.18s ease;
+}
