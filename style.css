@@ -7,8 +7,16 @@
 
 body {
   line-height: 1.6;
-  background-color: #f4f4f4;
   color: #333;
+  background: linear-gradient(
+    -45deg,
+    #f4f4f4,
+    #eef2f7,
+    #f8fafc,
+    #e5e7eb
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
 }
 
 header {
@@ -347,4 +355,12 @@ a:hover{
 /* Smoother image hover */
 .image-container img{
   transition: transform 0.18s ease;
+}
+
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
