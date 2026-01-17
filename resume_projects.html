@@ -9,7 +9,15 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header-bg-mountain">
+  <header class="header-bg-mountain aurora-container">
+    <div class="aurora"></div>
+
+    <div class="hero-top">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        🌙
+      </button>
+    </div>
+
     <h1>Projects & Experience</h1>
     <p>Technical Work, Independent Projects, and Professional Experience</p>
     <a href="index.html" class="btn btn-black">← Back to Home</a>
@@ -200,11 +208,8 @@
   </section>
 
   <!-- RESUME -->
-    <section style="text-align: left; background: #f9f9f9; padding: 2rem 1rem; border-radius: 8px; margin: 2rem auto; max-width: 900px;">
+    <section class="resume-section">
     <h2><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resume</h2>
-    <p style="margin-bottom: 1rem; font-size: 1.1rem;">
-        View or download my full resume as a PDF:
-    </p>
     <a href="images/Resume_Sutton_Elliott.pdf" target="_blank" class="btn btn-black">
         View / Download Resume
     </a>
@@ -214,6 +219,8 @@
   <footer>
     <p>© 2025 Sutton Elliott</p>
   </footer>
+
+  <script src="theme.js"></script>
 
 </body>
 </html>

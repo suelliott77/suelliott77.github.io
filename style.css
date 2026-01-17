@@ -19,6 +19,39 @@ body {
   animation: gradientShift 20s ease infinite;
 }
 
+/* ===== THEME TOKENS ===== */
+:root {
+  --bg: #f4f4f4;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --brand: #500000;
+  --link: #500000;
+  --shadow: 0 10px 20px rgba(0,0,0,0.10);
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --card: #ffffff;
+  --border: #ffffff;
+  --brand: #ffffff;
+  --link: #ffffff;
+  --shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* Apply theme */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links */
+a { color: var(--link); }
+
+
 header {
   background-size: cover;
   background-position: center;
@@ -28,10 +61,32 @@ header {
   text-align: center;
 }
 
+header h1,
+header h2,
+header h3,
+header p {
+  color: white;
+}
+
 header.header-bg-tamu {
   background-image: url('images/tamu_background.jpg');
-  color: black !important;
   position: relative;
+}
+
+header.header-bg-tamu,
+header.header-bg-tamu h1,
+header.header-bg-tamu h2,
+header.header-bg-tamu h3,
+header.header-bg-tamu p {
+  color: black !important;
+}
+
+:root[data-theme="dark"] header.header-bg-tamu,
+:root[data-theme="dark"] header.header-bg-tamu h1,
+:root[data-theme="dark"] header.header-bg-tamu h2,
+:root[data-theme="dark"] header.header-bg-tamu h3,
+:root[data-theme="dark"] header.header-bg-tamu p {
+  color: white !important;
 }
 
 header.header-bg-tamu::before {
@@ -66,6 +121,54 @@ header .btn {
   border-radius: 5px;
 }
 
+/* ===== HERO AURORA BACKGROUND ===== */
+.aurora-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle animated aurora layer */
+.aurora {
+  position: absolute;
+  inset: -40%;
+  z-index: 0;
+
+  /* Tuned to your branding: maroon + neutral glow */
+  background:
+    radial-gradient(circle at 20% 30%, rgba(80, 0, 0, 0.35), transparent 45%),
+    radial-gradient(circle at 75% 40%, rgba(0, 0, 0, 0.18), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(120, 120, 120, 0.20), transparent 55%);
+
+  filter: blur(90px);
+  opacity: 0.75;
+  mix-blend-mode: overlay;
+  animation: auroraMove 28s linear infinite;
+}
+
+/* Keep your header content above aurora */
+.aurora-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes auroraMove {
+  0%   { transform: translate(0%, 0%) rotate(0deg); }
+  50%  { transform: translate(10%, -10%) rotate(180deg); }
+  100% { transform: translate(0%, 0%) rotate(360deg); }
+}
+
+/* Dark mode tweak: aurora a bit stronger */
+:root[data-theme="dark"] .aurora {
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .aurora { animation: none; }
+}
+
+
 .btn-white {
   background: black;
   color: white;
@@ -83,6 +186,53 @@ header .btn {
   color: white;
   border: 1px solid #ccc;
 }
+
+/* ===== HEADER BUTTON LAYOUT ===== */
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* Optional: slightly nicer button hover */
+header .btn {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+header .btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.theme-toggle {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  z-index: 100;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--text);
+}
+
+
 
 section {
   max-width: 900px;
@@ -144,7 +294,7 @@ ul {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #1f2933;
+  color: var(--text);
 }
 
 h2::after {
@@ -191,8 +341,14 @@ h2::after {
   font-weight: 500;
 
   background: white;
+  color: #1f2933;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+:root[data-theme="dark"] .carousel-card {
+  background: #2a2a2a;
+  color: #ffffff;
 }
 
 
@@ -312,6 +468,7 @@ footer {
 
 .card h3{
   margin-bottom: 0.5rem;
+  color: #1f2933;
 }
 
 .card p{
@@ -331,7 +488,7 @@ footer {
 
 /* Resume callout (resume_projects.html) */
 .resume-callout{
-  background: white;
+  background: var(--card);
   border-radius: 12px;
   padding: 1.75rem 1.5rem;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
@@ -341,6 +498,25 @@ footer {
   margin-bottom: 1rem;
   font-size: 1.05rem;
   color: #374151;
+}
+
+:root[data-theme="dark"] .resume-callout-text {
+  color: #1f2933;
+}
+
+.resume-section {
+  text-align: left;
+  background: #f9f9f9;
+  color: #1f2933;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+:root[data-theme="dark"] .resume-section {
+  background: #2a2a2a;
+  color: #ffffff;
 }
 
 /* Improve link readability globally */
@@ -357,10 +533,50 @@ a:hover{
   transition: transform 0.18s ease;
 }
 
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+}
+
+.project {
+  border-bottom: 1px solid var(--border);
+}
+
+.project em { color: var(--muted); }
 
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* ===== THEME TOGGLE (SHOWS ON EVERY PAGE) ===== */
+.hero-top {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+  padding: 0 1.5rem;
+}
+
+.theme-toggle {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #e5e7eb;
 }
