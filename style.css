@@ -605,3 +605,10 @@ footer {
   color: white;
   margin-top: 2rem;
 }
+
+#about {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+

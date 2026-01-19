@@ -14,7 +14,7 @@
     }
 
     // 3) Fallback
-    return "light";
+    return "dark";
   }
 
   function applyTheme(theme) {
