@@ -42,9 +42,9 @@ h1, h2, h3, h4, h5, h6 {
 body {
   padding-top: var(--nav-height);
   background:
-    radial-gradient(circle at 12% 18%, rgba(128, 0, 0, 0.55), transparent 45%),
-    radial-gradient(circle at 88% 12%, rgba(0, 0, 0, 0.35), transparent 48%),
-    radial-gradient(circle at 50% 92%, rgba(120, 120, 120, 0.45), transparent 55%),
+    radial-gradient(circle at 12% 18%, rgba(128, 0, 0, 0.25), transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(0, 0, 0, 0.18), transparent 48%),
+    radial-gradient(circle at 50% 92%, rgba(120, 120, 120, 0.20), transparent 55%),
     linear-gradient(
       120deg,
       #fff1f2,
@@ -52,8 +52,7 @@ body {
       #e5e7eb,
       #f3f4f6
     );
-  background-size: 220% 220%;
-  animation: boldGradient 20s ease infinite;
+  background-size: 100% 100%;
   color: var(--text);
   line-height: 1.7;
 }
@@ -61,9 +60,9 @@ body {
 /* Dark mode body background */
 :root[data-theme="dark"] body {
   background:
-    radial-gradient(circle at 20% 20%, rgba(120, 0, 0, 0.45), transparent 45%),
-    radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.45), transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(120, 120, 120, 0.35), transparent 50%),
+    radial-gradient(circle at 20% 20%, rgba(120, 0, 0, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.35), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(120, 120, 120, 0.20), transparent 50%),
     linear-gradient(
       120deg,
       #020617,
@@ -71,16 +70,9 @@ body {
       #020617,
       #111827
     );
-  background-size: 200% 200%;
+  background-size: 100% 100%;
 }
 
-/* Gradient animation */
-@keyframes boldGradient {
-  0%   { background-position: 0% 50%; }
-  33%  { background-position: 100% 20%; }
-  66%  { background-position: 50% 100%; }
-  100% { background-position: 0% 50%; }
-}
 
 /* Noise texture overlay */
 body::before {
@@ -241,8 +233,8 @@ header .btn:hover {
     radial-gradient(circle at 75% 40%, rgba(0, 0, 0, 0.18), transparent 50%),
     radial-gradient(circle at 50% 80%, rgba(120, 120, 120, 0.20), transparent 55%);
   filter: blur(90px);
-  opacity: 0.85;
-  animation: auroraMove 28s linear infinite;
+  opacity: 0.5;
+  animation: auroraMove 48s ease-in-out infinite;
   pointer-events: none; /* don't block clicks */
 }
 
@@ -253,9 +245,11 @@ header .btn:hover {
 }
 
 @keyframes auroraMove {
-  0%   { transform: translate(0%, 0%) rotate(0deg); }
-  50%  { transform: translate(10%, -10%) rotate(180deg); }
-  100% { transform: translate(0%, 0%) rotate(360deg); }
+  0%   { transform: translate(0%, 0%); }
+  25%  { transform: translate(6%, -5%); }
+  50%  { transform: translate(10%, 4%); }
+  75%  { transform: translate(3%, -8%); }
+  100% { transform: translate(0%, 0%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
