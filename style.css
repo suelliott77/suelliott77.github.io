@@ -282,6 +282,15 @@ header .btn:hover {
   color: #e5e7eb;
 }
 
+/* ========= PAGE HEADER (SUB-PAGES) ========= */
+
+header.page-header {
+  background-color: #07070f;
+  padding: 3.5rem 2rem 3.25rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
 /* ========= SPLIT HERO (INDEX PAGE) ========= */
 
 header.hero-split {
