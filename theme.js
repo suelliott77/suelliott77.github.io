@@ -32,16 +32,23 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("themeToggle");
-    if (!toggle) return;
-
-    updateIcon(toggle);
-
-    toggle.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
-      applyTheme(next);
-      localStorage.setItem("theme", next);
+    if (toggle) {
       updateIcon(toggle);
+      toggle.addEventListener("click", () => {
+        const current = root.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        applyTheme(next);
+        localStorage.setItem("theme", next);
+        updateIcon(toggle);
+      });
+    }
+
+    const path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      const href = a.getAttribute('href');
+      if (href === path || (path === '' && href === 'index.html')) {
+        a.classList.add('nav-active');
+      }
     });
   });
 })();
