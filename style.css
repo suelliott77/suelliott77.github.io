@@ -120,51 +120,6 @@ header p {
   color: white;
 }
 
-/* TAMU header with overlay + aurora layering */
-header.header-bg-tamu {
-  background-image: url('images/tamu_background.jpg');
-  position: relative;
-  overflow: hidden;
-}
-
-header.header-bg-tamu::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.6);
-  z-index: 1; /* overlay */
-}
-
-/* aurora sits ABOVE overlay but BELOW text */
-header.header-bg-tamu .aurora {
-  z-index: 2;
-}
-
-header.header-bg-tamu > *:not(.aurora) {
-  position: relative;
-  z-index: 3;
-}
-
-header.header-bg-tamu,
-header.header-bg-tamu h1,
-header.header-bg-tamu h2,
-header.header-bg-tamu h3,
-header.header-bg-tamu p {
-  color: black !important;
-}
-
-:root[data-theme="dark"] header.header-bg-tamu,
-:root[data-theme="dark"] header.header-bg-tamu h1,
-:root[data-theme="dark"] header.header-bg-tamu h2,
-:root[data-theme="dark"] header.header-bg-tamu h3,
-:root[data-theme="dark"] header.header-bg-tamu p {
-  color: white !important;
-}
-
-/* Mountain header background */
-.header-bg-mountain {
-  background-image: url('images/background1.jpg');
-}
 
 /* Header buttons */
 header .btn {
