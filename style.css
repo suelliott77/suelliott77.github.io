@@ -380,9 +380,7 @@ header.hero-split h1 {
 .hero-photo-wrap img {
   width: 100%;
   max-width: 420px;
-  height: 520px;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
   border-radius: 16px;
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.7),
@@ -408,7 +406,7 @@ header.hero-split h1 {
 
   .hero-photo-wrap img {
     max-width: 260px;
-    height: 320px;
+    height: auto;
   }
 
   .hero-cta,
