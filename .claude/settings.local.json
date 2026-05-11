@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" add style.css)",
+      "Bash(git -C c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io commit -m ' *)",
+      "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" push origin main)",
+      "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" add index.html style.css)",
+      "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" add images/suit_closeup.jpg index.html resume_projects.html personal_project.html schooling.html leadership.html style.css)",
+      "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" status)",
+      "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" add images/suit_closeup.jpg style.css)"
+    ]
+  }
+}
