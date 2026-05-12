@@ -15,64 +15,35 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --nav-height: 58px;
-  --bg: #f4f4f4;
+  --bg: #EFFAFD;
   --text: #1f2933;
   --muted: #6b7280;
   --card: #ffffff;
   --border: #e5e7eb;
-  --brand: #500000;
-  --link: #500000;
+  --brand: #4A8BDF;
+  --link: #4A8BDF;
   --shadow: 0 10px 20px rgba(0,0,0,0.10);
 }
 
-:root[data-theme="dark"] {
-  --bg: #020617;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --card: rgba(15, 23, 42, 0.9);
-  --border: rgba(148,163,184,0.7);
-  --brand: #fca5a5;
-  --link: #f3d0d0;
-  --shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
+/* ========= BODY BACKGROUND ========= */
 
-/* ========= BOLD BODY BACKGROUND ========= */
-
-/* Light mode body background */
 body {
   padding-top: var(--nav-height);
   background:
-    radial-gradient(circle at 12% 18%, rgba(128, 0, 0, 0.25), transparent 45%),
-    radial-gradient(circle at 88% 12%, rgba(0, 0, 0, 0.18), transparent 48%),
-    radial-gradient(circle at 50% 92%, rgba(120, 120, 120, 0.20), transparent 55%),
+    radial-gradient(circle at 12% 18%, rgba(74, 139, 223, 0.18), transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(80, 0, 0, 0.10), transparent 48%),
+    radial-gradient(circle at 50% 92%, rgba(74, 139, 223, 0.12), transparent 55%),
     linear-gradient(
       120deg,
-      #fff1f2,
-      #f9fafb,
-      #e5e7eb,
-      #f3f4f6
+      #EFFAFD,
+      #e4f4fc,
+      #ddeefb,
+      #EFFAFD
     );
   background-size: 100% 100%;
   color: var(--text);
   line-height: 1.7;
 }
-
-/* Dark mode body background */
-:root[data-theme="dark"] body {
-  background:
-    radial-gradient(circle at 20% 20%, rgba(120, 0, 0, 0.25), transparent 45%),
-    radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.35), transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(120, 120, 120, 0.20), transparent 50%),
-    linear-gradient(
-      120deg,
-      #020617,
-      #0f172a,
-      #020617,
-      #111827
-    );
-  background-size: 100% 100%;
-}
-
 
 /* Noise texture overlay */
 body::before {
@@ -84,11 +55,8 @@ body::before {
   z-index: -1;
 }
 
-/* Reduce motion respect */
 @media (prefers-reduced-motion: reduce) {
-  body {
-    animation: none;
-  }
+  body { animation: none; }
 }
 
 /* ========= GLOBAL LINK STYLE ========= */
@@ -107,7 +75,7 @@ a:hover {
 header {
   background-size: cover;
   background-position: center;
-  background-color: #500000;
+  background-color: #07070f;
   color: white;
   padding: 2rem 1rem 2.25rem;
   text-align: center;
@@ -119,7 +87,6 @@ header h3,
 header p {
   color: white;
 }
-
 
 /* Header buttons */
 header .btn {
@@ -156,7 +123,6 @@ header .btn:hover {
   border: 1px solid #ccc;
 }
 
-/* Backwards-compatible alias used in some pages */
 .btn-black {
   background: black;
   color: white;
@@ -184,16 +150,15 @@ header .btn:hover {
   inset: -40%;
   z-index: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(80, 0, 0, 0.35), transparent 45%),
-    radial-gradient(circle at 75% 40%, rgba(0, 0, 0, 0.18), transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(120, 120, 120, 0.20), transparent 55%);
+    radial-gradient(circle at 20% 30%, rgba(74, 139, 223, 0.35), transparent 45%),
+    radial-gradient(circle at 75% 40%, rgba(80, 0, 0, 0.20), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(74, 139, 223, 0.15), transparent 55%);
   filter: blur(90px);
   opacity: 0.5;
   animation: auroraMove 48s ease-in-out infinite;
-  pointer-events: none; /* don't block clicks */
+  pointer-events: none;
 }
 
-/* header content should always be above aurora */
 .aurora-container > *:not(.aurora) {
   position: relative;
   z-index: 5;
@@ -209,32 +174,6 @@ header .btn:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .aurora { animation: none; }
-}
-
-/* ========= THEME TOGGLE (ON EVERY PAGE) ========= */
-
-.hero-top {
-  display: flex;
-  justify-content: flex-end;
-  max-width: 900px;
-  margin: 0 auto 1rem auto;
-  padding: 0 1.5rem;
-}
-
-.theme-toggle {
-  background: rgba(255,255,255,0.85);
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 999px;
-  padding: 0.45rem 0.7rem;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-:root[data-theme="dark"] .theme-toggle {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #e5e7eb;
 }
 
 /* ========= PAGE HEADER (SUB-PAGES) ========= */
@@ -279,7 +218,7 @@ header.hero-split {
 header.hero-split h1 {
   font-size: clamp(2.4rem, 5vw, 3.75rem);
   font-weight: 700;
-  color: #fca5a5;
+  color: #bfdbfe;
   line-height: 1.1;
   margin-bottom: 0.6rem;
   letter-spacing: -0.02em;
@@ -308,9 +247,9 @@ header.hero-split h1 {
 .btn-hero-primary {
   display: inline-block;
   padding: 0.75rem 1.75rem;
-  background: #500000;
+  background: #4A8BDF;
   color: white;
-  border: 2px solid #500000;
+  border: 2px solid #4A8BDF;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -319,8 +258,8 @@ header.hero-split h1 {
 }
 
 .btn-hero-primary:hover {
-  background: #6b0000;
-  border-color: #6b0000;
+  background: #3a7acc;
+  border-color: #3a7acc;
   transform: translateY(-2px);
   opacity: 1;
 }
@@ -365,8 +304,8 @@ header.hero-split h1 {
 }
 
 .hero-social a:hover {
-  background: rgba(80, 0, 0, 0.45);
-  color: #fca5a5;
+  background: rgba(74, 139, 223, 0.35);
+  color: #bfdbfe;
   transform: translateY(-2px);
   opacity: 1;
 }
@@ -435,24 +374,14 @@ header.hero-split h1 {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-:root[data-theme="dark"] .site-nav {
-  background: rgba(2, 6, 23, 0.92);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-}
-
 .nav-brand {
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #500000;
+  color: #4A8BDF;
   text-decoration: none;
   letter-spacing: -0.02em;
   white-space: nowrap;
-}
-
-:root[data-theme="dark"] .nav-brand {
-  color: #fca5a5;
 }
 
 .nav-links {
@@ -476,22 +405,12 @@ header.hero-split h1 {
 
 .nav-links a:hover,
 .nav-links a.nav-active {
-  background: rgba(80, 0, 0, 0.08);
-  color: #500000;
+  background: rgba(74, 139, 223, 0.10);
+  color: #4A8BDF;
 }
 
 .nav-links a.nav-active {
   font-weight: 600;
-}
-
-:root[data-theme="dark"] .nav-links a {
-  color: #9ca3af;
-}
-
-:root[data-theme="dark"] .nav-links a:hover,
-:root[data-theme="dark"] .nav-links a.nav-active {
-  background: rgba(252, 165, 165, 0.1);
-  color: #fca5a5;
 }
 
 @media (max-width: 600px) {
@@ -518,14 +437,7 @@ section {
     inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
-/* Dark mode sections */
-:root[data-theme="dark"] section {
-  background: rgba(15, 23, 42, 0.85);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
-
-/* Light-mode maroon aura around sections */
-:root:not([data-theme="dark"]) section::before {
+section::before {
   content: "";
   position: absolute;
   inset: -1px;
@@ -533,9 +445,9 @@ section {
   background:
     linear-gradient(
       120deg,
-      rgba(128,0,0,0.18),
+      rgba(74,139,223,0.15),
       rgba(255,255,255,0),
-      rgba(128,0,0,0.12)
+      rgba(80,0,0,0.10)
     );
   pointer-events: none;
   z-index: -1;
@@ -546,7 +458,7 @@ section {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--text);
+  color: #4A8BDF;
 }
 
 h2::after {
@@ -556,11 +468,6 @@ h2::after {
   height: 3px;
   background: #500000;
   margin-top: 0.5rem;
-}
-
-/* Light mode: stronger maroon heading color */
-:root:not([data-theme="dark"]) h2 {
-  color: #500000;
 }
 
 /* ========= PROJECT SECTIONS ========= */
@@ -605,7 +512,7 @@ h2::after {
   content: "•";
   position: absolute;
   left: 0;
-  color: #500000;
+  color: #4A8BDF;
   font-size: 1.2rem;
   line-height: 1;
 }
@@ -616,20 +523,21 @@ ul {
   margin-left: 1.5rem;
 }
 
-/* Skills list override example (if needed)
-#skills ul { ... }
-*/
-
 /* ========= HOME PAGE CARDS / GRID ========= */
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
   margin-top: 1.5rem;
 }
 
-/* Used on the home page for quick navigation tiles */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
   background: var(--card);
   border-radius: 12px;
@@ -647,18 +555,13 @@ ul {
 .card-icon {
   width: 40px;
   height: 40px;
-  background: rgba(80, 0, 0, 0.08);
+  background: rgba(74, 139, 223, 0.10);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.85rem;
-  color: #500000;
-}
-
-:root[data-theme="dark"] .card-icon {
-  background: rgba(252, 165, 165, 0.1);
-  color: #fca5a5;
+  color: #4A8BDF;
 }
 
 .card h3 {
@@ -666,27 +569,15 @@ ul {
   color: #1f2933;
 }
 
-:root[data-theme="dark"] .card h3 {
-  color: #e5e7eb;
-}
-
 .card p {
   color: #4b5563;
   margin-bottom: 0.75rem;
 }
 
-:root[data-theme="dark"] .card p {
-  color: #9ca3af;
-}
-
 .card a {
-  color: #500000;
+  color: #4A8BDF;
   text-decoration: none;
   font-weight: 600;
-}
-
-:root[data-theme="dark"] .card a {
-  color: var(--link);
 }
 
 .card a:hover {
@@ -707,11 +598,6 @@ ul {
   color: #374151;
 }
 
-:root[data-theme="dark"] .resume-callout-text {
-  color: #e5e7eb;
-}
-
-/* Optional extra resume section style */
 .resume-section {
   text-align: left;
   background: #f9f9f9;
@@ -720,11 +606,6 @@ ul {
   border-radius: 8px;
   margin: 2rem auto;
   max-width: 900px;
-}
-
-:root[data-theme="dark"] .resume-section {
-  background: #2a2a2a;
-  color: #ffffff;
 }
 
 /* ========= CAROUSEL ========= */
@@ -758,16 +639,11 @@ ul {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-:root[data-theme="dark"] .carousel-card {
-  background: #2a2a2a;
-  color: #ffffff;
-}
-
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #500000;
+  background: #4A8BDF;
   color: white;
   border: none;
   padding: 0.5rem 0.75rem;
@@ -799,7 +675,7 @@ ul {
 }
 
 .carousel-dot.active {
-  background: white;
+  background: #4A8BDF;
 }
 
 /* ========= IMAGES ========= */
@@ -852,20 +728,12 @@ ul {
 .contact-item:hover {
   box-shadow: var(--shadow);
   transform: translateY(-2px);
-  color: #500000;
-}
-
-:root[data-theme="dark"] .contact-item:hover {
-  color: #fca5a5;
+  color: #4A8BDF;
 }
 
 .contact-item svg {
   flex-shrink: 0;
-  color: #500000;
-}
-
-:root[data-theme="dark"] .contact-item svg {
-  color: #fca5a5;
+  color: #4A8BDF;
 }
 
 /* ========= FOOTER ========= */
@@ -913,4 +781,3 @@ footer {
   border-radius: 16px;
   box-shadow: var(--shadow);
 }
-
