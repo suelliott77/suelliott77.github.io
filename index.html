@@ -26,13 +26,14 @@
   <!-- HEADER / HERO -->
   <header class="hero-split aurora-container">
     <div class="aurora"></div>
+    <canvas id="hero-particles"></canvas>
 
     <div class="hero-content">
       <div class="hero-text">
         <p class="hero-greeting">Hi, I'm</p>
         <h1>Sutton Elliott</h1>
         <p class="hero-role">Computer Engineering Graduate</p>
-        <p class="hero-sub">Texas A&amp;M University &middot; Graduated May 2026</p>
+        <p class="hero-sub">Texas A&amp;M University &middot; May 2026</p>
 
         <div class="hero-cta">
           <a href="#overview" class="btn-hero-primary">View My Work</a>
@@ -57,7 +58,7 @@
 
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" data-reveal>
     <h2>About Me</h2>
     <p>
       I am a Computer Engineering Graduate from Texas A&M University with a strong interest
@@ -80,46 +81,46 @@
 
     <div class="project-grid">
 
-      <div class="card">
+      <div class="card" data-reveal>
         <div class="card-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
         </div>
         <h3>Professional Projects</h3>
         <p>
-          Projects I'd show in an interview — built and deployed, not just assigned.
+          Projects I’ve worked on through schooling and team development.
         </p>
         <a href="resume_projects.html">View Projects →</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-reveal="delay-1">
         <div class="card-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </div>
         <h3>Personal Projects</h3>
         <p>
-          Things I built because I wanted to, not because it was assigned.
+          Projects I built on my own to learn, experiment, and improve my skills.
         </p>
         <a href="personal_project.html">View Personal Projects →</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-reveal="delay-2">
         <div class="card-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         </div>
         <h3>Education & Coursework</h3>
         <p>
-          Four years of Computer Engineering at A&amp;M — what I actually studied.
+          Four years of Computer Engineering at Texas A&amp;M — what I actually studied.
         </p>
         <a href="schooling.html">View Education →</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-reveal="delay-3">
         <div class="card-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <h3>Leadership & Involvement</h3>
         <p>
-          Camp counseling, church leadership, mentorship — the non-technical side.
+          Camp counseling, church leadership, mentorship — the non-technical side of me.
         </p>
         <a href="leadership.html">View Leadership →</a>
       </div>
@@ -131,22 +132,66 @@
   <section id="skills">
     <h2>Technical Snapshot</h2>
 
-    <div class="project">
-      <ul>
-        <li><strong>Programming Languages:</strong> C++, Python, Java, JavaScript</li>
-        <li><strong>Web:</strong> HTML, CSS, PHP, Google Apps Script</li>
-        <li><strong>Databases:</strong> SQL, MySQL, JDBC</li>
-        <li><strong>Cloud & AI:</strong> Microsoft Azure AI Fundamentals (AI-900)</li>
-        <li><strong>Strengths:</strong> Leadership, Communication, Adaptability</li>
-      </ul>
+    <div class="skill-groups">
+
+      <div class="skill-group">
+        <p class="skill-group-label">Languages</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Tools &amp; Frameworks</p>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">JDBC</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Google Apps Script</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Web Development</p>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Full-Stack</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">AI &amp; Cloud</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Azure AI-900</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Interests</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Software Engineering</span>
+          <span class="skill-tag">AI / ML</span>
+          <span class="skill-tag">Database Systems</span>
+          <span class="skill-tag">Embedded Systems</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
   <!-- CONTACT / CTA -->
-  <section id="contact">
+  <section id="contact" data-reveal>
     <h2>Get in Touch</h2>
-    <p>If you'd like to learn more about my work or connect professionally, feel free to reach out.</p>
+    <p>If you'd like to learn more about my work or connect professionally, feel free to reach out!</p>
 
     <div class="contact-grid">
       <a href="mailto:sutton.elliott777@gmail.com" class="contact-item">
@@ -174,11 +219,11 @@
       <div class="footer-links">
         <a href="https://linkedin.com/in/suelliott77/" target="_blank">LinkedIn</a>
         <a href="https://github.com/suelliott77" target="_blank">GitHub</a>
-        <a href="mailto:sutton.elliott777@gmail.com">Email</a>
       </div>
     </div>
   </footer>
 
+  <script src="animations.js"></script>
   <script src="theme.js"></script>
 
 </body>
