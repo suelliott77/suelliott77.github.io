@@ -786,6 +786,17 @@ ul {
   transform: scale(1.05);
 }
 
+.image-container--stack {
+  flex-direction: column;
+  overflow: visible;
+}
+
+.image-container--stack img {
+  width: 100%;
+  max-height: none;
+  height: auto;
+}
+
 /* ========= CONTACT ========= */
 
 .contact-grid {
