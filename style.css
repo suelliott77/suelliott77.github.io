@@ -797,6 +797,16 @@ ul {
   height: auto;
 }
 
+.image-container--wrap {
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: visible;
+}
+
+.image-container--wrap img {
+  flex: 0 1 calc(50% - 0.5rem);
+}
+
 /* ========= CONTACT ========= */
 
 .contact-grid {
