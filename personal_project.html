@@ -15,7 +15,7 @@
     <a class="nav-brand" href="index.html">Sutton Elliott</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="resume_projects.html">Projects</a></li>
+      <li><a href="resume_projects.html">Projects & Experience</a></li>
       <li><a href="personal_project.html">Personal</a></li>
       <li><a href="schooling.html">Education</a></li>
       <li><a href="leadership.html">Leadership</a></li>
@@ -25,6 +25,10 @@
   <!-- HEADER -->
   <header class="page-header aurora-container">
     <div class="aurora"></div>
+
+    <div class="page-header-avatar" data-accent="purple">
+      <img src="images/hoopin.jpg" alt="Sutton Elliott">
+    </div>
 
     <h1>Personal Projects</h1>
     <p>Small Builds, Experiments, and Curiosity-Driven Projects</p>
@@ -58,236 +62,186 @@
   </section>
 
   <!-- PROJECTS -->
-  <section>
+  <section class="section-wide">
     <h2>Projects</h2>
 
-    <!-- DAILY CHECK-IN PROJECT -->
-    <div class="project">
-    <h3>Daily Check-In</h3>
-    <p><em>Electron, JavaScript, Node.js, Desktop Application</em></p>
+    <div class="case-study-grid">
 
-    <div class="image-container image-container--stack">
-        <img src="images/checkin_mainpage.png" alt="Daily Check-In Main View">
+      <!-- DAILY CHECK-IN PROJECT -->
+      <div class="case-study" data-accent="blue">
+        <div class="case-study-media">
+          <img src="images/checkin_mainpage.png" alt="Daily Check-In Main View">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">01</span>
+          <h3>Daily Check-In</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Electron</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Desktop Application</span>
+          </div>
+          <p>
+            Built a lightweight Electron app that lives in the corner of your screen and
+            reminds you to stay connected with the people you care about. Each day it
+            surfaces a rotating list of contacts — prioritizing whoever you haven't reached
+            out to in the longest time — so staying in touch becomes a deliberate habit
+            rather than an afterthought.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Implemented a weighted daily-rotation algorithm that surfaces contacts based on how long it has been since you last reached out</li>
+            <li>Designed an always-on-top popup window that collapses to a slim header bar, keeping the reminder visible without cluttering the workspace</li>
+            <li>Stored per-contact notes and prayer requests locally with full persistence between sessions — no data leaves the machine</li>
+            <li>Added configurable settings for contacts per day, screen corner placement, and window opacity, with auto-launch on system startup</li>
+          </ul>
+          <a class="case-study-link" href="https://github.com/suelliott77/checkin_popup" target="_blank">View Source Code →</a>
+        </div>
+      </div>
+
+      <!-- TI-84 CALCULATOR PROJECT -->
+      <div class="case-study case-study--reverse" data-accent="purple">
+        <div class="case-study-media case-study-media--dual">
+          <img src="images/calculator_equation.png" alt="TI-84 Calculator Equation Input">
+          <img src="images/calculator_result.png" alt="TI-84 Calculator Evaluation Result">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">02</span>
+          <h3>TI-84 Calculator (Recreated)</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Mathematical Systems</span>
+            <span class="tech-pill">Input Parsing</span>
+          </div>
+          <p>
+            Designed and implemented a functional recreation of a TI-84-style calculator
+            with an emphasis on accurate mathematical evaluation and robust user input
+            handling. The project focused on translating formal mathematical rules into
+            executable program logic while maintaining internal calculator state.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Implemented core arithmetic operations with correct order-of-operations and expression evaluation</li>
+            <li>Designed a state-based input system to emulate real calculator behavior, including chained expressions and sequential operations</li>
+            <li>Identified and handled edge cases such as invalid input, malformed expressions, and division-by-zero scenarios</li>
+          </ul>
+          <a class="case-study-link" href="https://github.com/suelliott77/random_projects/blob/main/TI84_calculator.py" target="_blank">View Source Code →</a>
+        </div>
+      </div>
+
+      <!-- BUDGET TRACKER PROJECT -->
+      <div class="case-study" data-accent="green">
+        <div class="case-study-media">
+          <img src="images/budget_tracker.png" alt="Budget Tracker Interface">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">03</span>
+          <h3>Personal Budget Tracker</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Data Structures</span>
+            <span class="tech-pill">File I/O</span>
+          </div>
+          <p>
+            Developed a personal budgeting application to track income and expenses,
+            analyze spending patterns, and calculate monthly financial summaries. The
+            project emphasized data organization, accuracy, and user-friendly interaction.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Implemented structured data storage to categorize transactions and compute running balances</li>
+            <li>Enabled input validation and error handling to ensure reliable financial calculations</li>
+            <li>Generated summary reports to visualize spending trends and budget limits</li>
+          </ul>
+          <a class="case-study-link" href="https://github.com/suelliott77/random_projects/blob/main/budget_tracker.py" target="_blank">View Source Code →</a>
+        </div>
+      </div>
+
+      <!-- BUSINESS CARD GENERATOR PROJECT -->
+      <div class="case-study case-study--reverse" data-accent="amber">
+        <div class="case-study-media">
+          <img src="images/business_card.png" alt="Business Card Generator Result">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">04</span>
+          <h3>Business Card Generator</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">String Formatting</span>
+            <span class="tech-pill">File Generation</span>
+          </div>
+          <p>
+            Created a business card generator that dynamically produces
+            professional-looking cards based on user-provided information. The project
+            focused on layout formatting and automated document creation.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Designed reusable templates to generate consistent card layouts</li>
+            <li>Processed and formatted user input to ensure clean and readable output</li>
+            <li>Automated file generation for easy exporting and reuse</li>
+          </ul>
+          <a class="case-study-link" href="https://github.com/suelliott77/random_projects/blob/main/business_card_generator.py" target="_blank">View Source Code →</a>
+        </div>
+      </div>
+
+      <!-- GPA CALCULATOR PROJECT -->
+      <div class="case-study" data-accent="rose">
+        <div class="case-study-media">
+          <img src="images/GPA_calc.png" alt="GPA Calculator Interface">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">05</span>
+          <h3>GPA Calculator</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Mathematical Modeling</span>
+            <span class="tech-pill">Input Validation</span>
+          </div>
+          <p>
+            Built a grade calculation tool to compute weighted averages and final course
+            grades based on assignment and exam scores. The project emphasized correctness,
+            flexibility, and ease of use.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Implemented weighted grading logic to support customizable grading schemes</li>
+            <li>Validated inputs to prevent invalid scores and calculation errors</li>
+            <li>Provided clear output summaries for academic performance tracking</li>
+          </ul>
+          <a class="case-study-link" href="https://github.com/suelliott77/random_projects/blob/main/grade_calculator.py" target="_blank">View Source Code →</a>
+        </div>
+      </div>
+
+      <!-- TEXT EDITOR PROJECT -->
+      <div class="case-study case-study--reverse" data-accent="cyan">
+        <div class="case-study-media">
+          <img src="images/text_editor.png" alt="Text Editor Interface">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">06</span>
+          <h3>Text Editor</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">GUI Development</span>
+            <span class="tech-pill">File I/O</span>
+          </div>
+          <p>
+            Developed a lightweight text editor supporting basic file creation, editing,
+            and saving functionality. The project focused on user interface design,
+            responsiveness, and reliable file management.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Implemented core text editing features including open, save, and edit operations</li>
+            <li>Designed a clean and intuitive user interface for efficient interaction</li>
+            <li>Managed file I/O operations to ensure data persistence and reliability</li>
+          </ul>
+          <a class="case-study-link" href="https://github.com/suelliott77/random_projects/blob/main/text_editor.py" target="_blank">View Source Code →</a>
+        </div>
+      </div>
+
     </div>
-
-    <p>
-        Built a lightweight Electron app that lives in the corner of your screen and
-        reminds you to stay connected with the people you care about. Each day it
-        surfaces a rotating list of contacts — prioritizing whoever you haven't reached
-        out to in the longest time — so staying in touch becomes a deliberate habit rather
-        than an afterthought.
-    </p>
-
-    <ul>
-        <li>
-        Implemented a weighted daily-rotation algorithm that surfaces contacts based
-        on how long it has been since you last reached out
-        </li>
-        <li>
-        Designed an always-on-top popup window that collapses to a slim header bar,
-        keeping the reminder visible without cluttering the workspace
-        </li>
-        <li>
-        Stored per-contact notes and prayer requests locally with full persistence
-        between sessions — no data leaves the machine
-        </li>
-        <li>
-        Added configurable settings for contacts per day, screen corner placement,
-        and window opacity, with auto-launch on system startup
-        </li>
-    </ul>
-
-    <p>
-        <a href="https://github.com/suelliott77/checkin_popup" target="_blank">
-        View Source Code on GitHub
-        </a>
-    </p>
-    </div>
-
-    <!-- TI-84 CALCULATOR PROJECT -->
-    <div class="project">
-    <h3>TI-84 Calculator (Recreated)</h3>
-    <p><em>Python, Mathematical Systems, Input Parsing</em></p>
-
-    <div class="image-container">
-        <img src="images/calculator_equation.png" alt="TI-84 Calculator Equation Input">
-        <img src="images/calculator_result.png" alt="TI-84 Calculator Evaluation Result">
-    </div>
-
-    <p>
-        Designed and implemented a functional recreation of a TI-84-style calculator
-        with an emphasis on accurate mathematical evaluation and robust user input handling.
-        The project focused on translating formal mathematical rules into executable program
-        logic while maintaining internal calculator state.
-    </p>
-
-    <ul>
-        <li>
-        Implemented core arithmetic operations with correct order-of-operations
-        and expression evaluation
-        </li>
-        <li>
-        Designed a state-based input system to emulate real calculator behavior,
-        including chained expressions and sequential operations
-        </li>
-        <li>
-        Identified and handled edge cases such as invalid input, malformed expressions,
-        and division-by-zero scenarios
-        </li>
-    </ul>
-
-    <p>
-        <a href="https://github.com/suelliott77/random_projects/blob/main/TI84_calculator.py" target="_blank">
-        View Source Code on GitHub
-        </a>
-    </p>
-    </div>
-
-    <!-- BUDGET TRACKER PROJECT -->
-    <div class="project">
-    <h3>Personal Budget Tracker</h3>
-    <p><em>Python, Data Structures, File I/O</em></p>
-
-    <div class="image-container">
-        <img src="images/budget_tracker.png" alt="Budget Tracker Interface">
-    </div>
-
-    <p>
-        Developed a personal budgeting application to track income and expenses,
-        analyze spending patterns, and calculate monthly financial summaries.
-        The project emphasized data organization, accuracy, and user-friendly interaction.
-    </p>
-
-    <ul>
-        <li>
-        Implemented structured data storage to categorize transactions
-        and compute running balances
-        </li>
-        <li>
-        Enabled input validation and error handling to ensure reliable
-        financial calculations
-        </li>
-        <li>
-        Generated summary reports to visualize spending trends and budget limits
-        </li>
-    </ul>
-
-    <p>
-        <a href="https://github.com/suelliott77/random_projects/blob/main/budget_tracker.py" target="_blank">
-        View Source Code on GitHub
-        </a>
-    </p>
-    </div>
-
-    <!-- BUSINESS CARD GENERATOR PROJECT -->
-    <div class="project">
-    <h3>Business Card Generator</h3>
-    <p><em>Python, String Formatting, File Generation</em></p>
-
-    <div class="image-container">
-        <img src="images/business_card.png" alt="Business Card Generator Result">
-    </div>
-
-    <p>
-        Created a business card generator that dynamically produces
-        professional-looking cards based on user-provided information.
-        The project focused on layout formatting and automated document creation.
-    </p>
-
-    <ul>
-        <li>
-        Designed reusable templates to generate consistent card layouts
-        </li>
-        <li>
-        Processed and formatted user input to ensure clean and readable output
-        </li>
-        <li>
-        Automated file generation for easy exporting and reuse
-        </li>
-    </ul>
-
-     <p>
-        <a href="https://github.com/suelliott77/random_projects/blob/main/business_card_generator.py" target="_blank">
-        View Source Code on GitHub
-        </a>
-    </p>
-    </div>
-
-    <!-- GPA CALCULATOR PROJECT -->
-    <div class="project">
-    <h3>GPA Calculator</h3>
-    <p><em>Python, Mathematical Modeling, Input Validation</em></p>
-
-    <div class="image-container">
-        <img src="images/GPA_calc.png" alt="GPA Calculator Interface">
-    </div>
-
-    <p>
-        Built a grade calculation tool to compute weighted averages
-        and final course grades based on assignment and exam scores.
-        The project emphasized correctness, flexibility, and ease of use.
-    </p>
-
-    <ul>
-        <li>
-        Implemented weighted grading logic to support customizable grading schemes
-        </li>
-        <li>
-        Validated inputs to prevent invalid scores and calculation errors
-        </li>
-        <li>
-        Provided clear output summaries for academic performance tracking
-        </li>
-    </ul>
-
-     <p>
-        <a href="https://github.com/suelliott77/random_projects/blob/main/grade_calculator.py" target="_blank">
-        View Source Code on GitHub
-        </a>
-    </p>
-    </div>
-
-    <!-- TEXT EDITOR PROJECT -->
-    <div class="project">
-    <h3>Text Editor</h3>
-    <p><em>Python, GUI Development, File I/O</em></p>
-
-    <div class="image-container">
-        <img src="images/text_editor.png" alt="Text Editor Interface">
-    </div>
-
-    <p>
-        Developed a lightweight text editor supporting basic file creation,
-        editing, and saving functionality. The project focused on user interface
-        design, responsiveness, and reliable file management.
-    </p>
-
-    <ul>
-        <li>
-        Implemented core text editing features including open, save, and edit
-        operations
-        </li>
-        <li>
-        Designed a clean and intuitive user interface for efficient interaction
-        </li>
-        <li>
-        Managed file I/O operations to ensure data persistence and reliability
-        </li>
-    </ul>
-
-     <p>
-        <a href="https://github.com/suelliott77/random_projects/blob/main/text_editor.py" target="_blank">
-        View Source Code on GitHub
-        </a>
-    </p>
-    </div>
-
 
     <!-- PLACEHOLDER FOR FUTURE PROJECTS -->
-    <div class="project">
-      <h3>Additional Personal Projects</h3>
+    <div class="case-study-more">
+      <h3>More on the way</h3>
       <p>
-        More small projects and experiments will be added here as I continue
+        Additional personal projects and experiments will be added here as I continue
         exploring new tools, languages, and systems.
       </p>
     </div>

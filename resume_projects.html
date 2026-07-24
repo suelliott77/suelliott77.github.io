@@ -15,7 +15,7 @@
     <a class="nav-brand" href="index.html">Sutton Elliott</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="resume_projects.html">Projects</a></li>
+      <li><a href="resume_projects.html">Projects & Experience</a></li>
       <li><a href="personal_project.html">Personal</a></li>
       <li><a href="schooling.html">Education</a></li>
       <li><a href="leadership.html">Leadership</a></li>
@@ -25,6 +25,10 @@
   <!-- HEADER -->
   <header class="page-header aurora-container">
     <div class="aurora"></div>
+
+    <div class="page-header-avatar" data-accent="blue">
+      <img src="images/me.jpg" alt="Sutton Elliott">
+    </div>
 
     <h1>Projects & Experience</h1>
     <p>Technical Work, Independent Projects, and Professional Experience</p>
@@ -59,47 +63,37 @@
   <section>
     <h2>Certifications</h2>
 
-    <div class="project">
-      <h3>Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
-      <p>
-        Earned Microsoft certification validating a foundational understanding
-        of artificial intelligence concepts, including machine learning,
-        computer vision, and Azure-based AI services, with an emphasis on
-        practical cloud applications and responsible AI principles.
-      </p>
-
-      <div class="image-container">
-        <img src="images/azure_cert.png" alt="Microsoft Azure AI Fundamentals Certificate">
+    <div class="cert-grid">
+      <div class="cert-card" data-accent="blue">
+        <div class="cert-card-media">
+          <img src="images/azure_cert.png" alt="Microsoft Azure AI Fundamentals Certificate">
+        </div>
+        <div class="cert-card-body">
+          <h3>Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
+          <p>
+            Earned Microsoft certification validating a foundational understanding of
+            artificial intelligence concepts, including machine learning, computer vision,
+            and Azure-based AI services, with an emphasis on practical cloud applications
+            and responsible AI principles.
+          </p>
+          <a class="case-study-link" href="https://learn.microsoft.com/en-us/users/elliottsutton-1432/transcript" target="_blank">View Certificate →</a>
+        </div>
       </div>
-      <p>
-        <a href="https://learn.microsoft.com/en-us/users/elliottsutton-1432/transcript" target="_blank">
-        View Certificate on Microsoft Learn
-        </a>
-      </p>
 
-    </div>
-
-    <div class="project">
-      <h3>Building with the Claude API</h3>
-      <p>
-        A comprehensive, developer-focused course covering everything from API fundamentals to
-        advanced AI application architecture: prompt engineering, tool use, retrieval-augmented
-        generation, prompt caching, and building agent-based systems.
-      </p>
-      <p>
-        Exactly the kind of practical training that bridges the gap between knowing AI exists
-        and knowing how to build with it.
-      </p>
-
-      <div class="image-container">
-        <img src="images/claude_cert.png" alt="Building with the Claude API Certificate">
+      <div class="cert-card" data-accent="purple">
+        <div class="cert-card-media">
+          <img src="images/claude_cert.png" alt="Building with the Claude API Certificate">
+        </div>
+        <div class="cert-card-body">
+          <h3>Building with the Claude API</h3>
+          <p>
+            A developer-focused course covering API fundamentals through advanced AI
+            application architecture — prompt engineering, tool use, retrieval-augmented
+            generation, prompt caching, and building agent-based systems.
+          </p>
+          <a class="case-study-link" href="https://verify.skilljar.com/c/4q36dwq8s54o" target="_blank">View Certificate →</a>
+        </div>
       </div>
-      <p>
-        <a href="https://verify.skilljar.com/c/4q36dwq8s54o" target="_blank">
-        View Certificate on Skilljar
-        </a>
-      </p>
-
     </div>
 
     <!--
@@ -120,231 +114,277 @@
   </section>
 
   <!-- PROJECTS -->
-  <section>
+  <section class="section-wide">
     <h2>Featured Projects</h2>
 
-    <!-- ECONEST -->
-    <div class="project">
-      <h3>EcoNest — Smart Home AI System</h3>
-      <p><em>Python, Flask, Docker, MySQL, Home Assistant, Raspberry Pi, Zigbee, Tailscale, Kasa, Govee, Blink</em></p>
+    <div class="case-study-grid">
 
-      <p>
-        EcoNest is a full-stack smart home automation system deployed in a live residential environment,
-        integrating 84 devices across Zigbee, Wi-Fi, and cloud APIs. The backend runs on a Dockerized
-        Home Assistant instance hosted on a Mac Mini, with data flowing from devices through custom logger
-        scripts into a Flask API and MySQL database. A reasoning layer sits on top of the pipeline to
-        enable intelligent automation decisions based on real-time sensor input.
-      </p>
+      <!-- ECONEST -->
+      <div class="case-study" data-accent="blue">
+        <div class="case-study-media">
+          <img src="images/econest.jpg" alt="EcoNest smart home dashboard screenshot">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">01</span>
+          <h3>EcoNest — Smart Home AI System</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">Home Assistant</span>
+            <span class="tech-pill">Raspberry Pi</span>
+            <span class="tech-pill">Zigbee</span>
+            <span class="tech-pill">Tailscale</span>
+            <span class="tech-pill">Kasa</span>
+            <span class="tech-pill">Govee</span>
+            <span class="tech-pill">Blink</span>
+          </div>
+          <p>
+            EcoNest is a full-stack smart home automation system deployed in a live residential
+            environment, integrating 84 devices across Zigbee, Wi-Fi, and cloud APIs. The backend
+            runs on a Dockerized Home Assistant instance hosted on a Mac Mini, with data flowing
+            from devices through custom logger scripts into a Flask API and MySQL database. A
+            reasoning layer sits on top of the pipeline to enable intelligent automation decisions
+            based on real-time sensor input.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Built a production-deployed smart home system from the ground up — not a demo — spanning embedded hardware, cloud APIs, and a live web interface</li>
+            <li>Unified 84 heterogeneous IoT devices across Zigbee, Wi-Fi, and cloud protocols under a single full-stack architecture</li>
+            <li>Delivered a fully functional system to a supervising professor, demonstrating that a student-built solution could handle real-world deployment complexity</li>
+            <li>Designed an end-to-end data pipeline from hardware integration through a Flask API, MySQL database, and AI reasoning layer</li>
+          </ul>
+        </div>
+      </div>
 
-      <ul>
-        <li>
-          Built a production-deployed smart home system from the ground up — not a demo —
-          spanning embedded hardware, cloud APIs, and a live web interface
-        </li>
-        <li>
-          Unified 84 heterogeneous IoT devices across Zigbee, Wi-Fi, and cloud protocols
-          under a single full-stack architecture
-        </li>
-        <li>
-          Delivered a fully functional system to a supervising professor, demonstrating
-          that a student-built solution could handle real-world deployment complexity
-        </li>
-        <li>
-          Designed an end-to-end data pipeline from hardware integration through a Flask API,
-          MySQL database, and AI reasoning layer
-        </li>
-      </ul>
-    </div>
+      <!-- GAMESENSE -->
+      <div class="case-study case-study--reverse" data-accent="purple">
+        <div class="case-study-media">
+          <img src="images/gamesense.png" alt="GameSense game search engine screenshot">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">02</span>
+          <h3>GameSense — Game Search Engine</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">TF-IDF</span>
+            <span class="tech-pill">Cosine Similarity</span>
+            <span class="tech-pill">IGDB API</span>
+          </div>
+          <p>
+            GameSense is a content-based game recommendation and search engine built on a dataset
+            of 25,000 titles sourced from the IGDB API. The system applies TF-IDF vectorization and
+            cosine similarity to match user queries against game descriptions, genres, and metadata
+            with meaningful relevance ranking. A Flask web application serves as the frontend,
+            providing an intuitive interface for search and discovery.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Applied information retrieval concepts — TF-IDF and cosine similarity — to a real, large-scale dataset without relying on an external search service</li>
+            <li>Built a functional search engine and user-facing product that demonstrates how NLP techniques translate into practical tools</li>
+            <li>Enabled natural language search and discovery across 25,000 game titles using a custom data pipeline from raw API data to a live interface</li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- GAMESENSE -->
-    <div class="project">
-      <h3>GameSense — Game Search Engine</h3>
-      <p><em>Python, Flask, TF-IDF, Cosine Similarity, IGDB API</em></p>
+      <!-- TAMU TRANSIT VOICE -->
+      <div class="case-study" data-accent="green">
+        <div class="case-study-media">
+          <img src="images/tamu_transit_app.png" alt="TAMU Transit Voice app screenshot">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">03</span>
+          <h3>TAMU Transit Voice — Accessible Bus Assistant</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">Web Speech API</span>
+            <span class="tech-pill">Speech Synthesis API</span>
+            <span class="tech-pill">OpenWebUI (Gemini 2.0)</span>
+          </div>
+          <p>
+            TAMU Transit Voice is a voice-first web prototype designed to make the Texas A&amp;M
+            bus system accessible to low-vision and visually impaired students. The interface
+            replaces the existing map-based app with a single microphone button and spoken,
+            AI-generated responses, integrating the browser's Web Speech API for input and Speech
+            Synthesis API for audio output, backed by TAMU's OpenWebUI platform.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Addressed a real accessibility gap in the TAMU bus app — which is built entirely around a visual, map-based interface — by designing voice as the primary interaction model</li>
+            <li>Validated the concept through a structured usability study: participants completed bus-related tasks significantly faster using the voice prototype than the original app</li>
+            <li>Users rated the system 5/5 for independent usability and 4.6/5 for ease of use in post-study surveys</li>
+            <li>Demonstrated that a lightweight voice-first interface can meaningfully reduce cognitive load for users who struggle with visual navigation</li>
+          </ul>
+        </div>
+      </div>
 
-      <p>
-        GameSense is a content-based game recommendation and search engine built on a dataset of
-        25,000 titles sourced from the IGDB API. The system applies TF-IDF vectorization and cosine
-        similarity to match user queries against game descriptions, genres, and metadata with meaningful
-        relevance ranking. A Flask web application serves as the frontend, providing an intuitive
-        interface for search and discovery.
-      </p>
+      <!-- PROFESSIONAL WEBSITE -->
+      <div class="case-study case-study--reverse" data-accent="amber">
+        <div class="case-study-media">
+          <img src="images/personal_portfolio.png" alt="Professional portfolio website screenshot">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">04</span>
+          <h3>Professional Portfolio Website (This Website)</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+          <p>
+            Designed and developed a personal portfolio website to present projects, academic
+            background, and technical skills in a clear and professional format. The site serves
+            as both a personal brand and a centralized showcase of work.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Designed a recruiter-friendly layout with clear navigation and structured content</li>
+            <li>Implemented responsive design to ensure usability across desktop and mobile devices</li>
+            <li>Integrated dynamic UI components, including interactive carousels and animations</li>
+            <li>Structured the site for future extensibility and ongoing iteration</li>
+          </ul>
+        </div>
+      </div>
 
-      <ul>
-        <li>
-          Applied information retrieval concepts — TF-IDF and cosine similarity — to a real,
-          large-scale dataset without relying on an external search service
-        </li>
-        <li>
-          Built a functional search engine and user-facing product that demonstrates how NLP
-          techniques translate into practical tools
-        </li>
-        <li>
-          Enabled natural language search and discovery across 25,000 game titles using a
-          custom data pipeline from raw API data to a live interface
-        </li>
-      </ul>
-    </div>
+      <!-- GOOGLE DOCS ADD-ON -->
+      <div class="case-study" data-accent="rose">
+        <div class="case-study-media">
+          <img src="images/google_addon.png" alt="Google Docs sidebar add-on screenshots">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">05</span>
+          <h3>Google Docs Add-on</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">Google Apps Script</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">HTML</span>
+          </div>
+          <p>
+            Designed and developed a custom Google Docs sidebar add-on to streamline document
+            workflows and reduce repetitive manual tasks by consolidating multiple utilities into
+            a single interface.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Integrated Google Drive and Gmail APIs to automate document saving, emailing, and file management</li>
+            <li>Implemented Find &amp; Replace functionality, digital signature insertion, and document duplication features</li>
+            <li>Designed a clean and intuitive sidebar UI focused on usability and workflow efficiency</li>
+            <li>Organized the codebase to support modular features and future expansion</li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- TAMU TRANSIT VOICE -->
-    <div class="project">
-      <h3>TAMU Transit Voice — Accessible Bus Assistant</h3>
-      <p><em>Next.js, TypeScript, CSS, Web Speech API, Speech Synthesis API, OpenWebUI (Gemini 2.0)</em></p>
+      <!-- DATABASE DASHBOARD -->
+      <div class="case-study case-study--reverse" data-accent="cyan">
+        <div class="case-study-media">
+          <img src="images/database_er_diagram.png" alt="AdventureWorks database ER diagram">
+        </div>
+        <div class="case-study-content">
+          <span class="case-study-index">06</span>
+          <h3>Database Analytics Dashboard</h3>
+          <div class="tech-pills">
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">JDBC</span>
+            <span class="tech-pill">MySQL (AdventureWorks)</span>
+          </div>
+          <p>
+            Developed an interactive analytics dashboard for exploring enterprise-scale employee,
+            department, and sales data using the AdventureWorks database. The project emphasized
+            database design, query optimization, and data analysis.
+          </p>
+          <ul class="case-study-highlights">
+            <li>Wrote complex SQL queries utilizing joins, subqueries, aggregation, and filtering to extract meaningful insights</li>
+            <li>Implemented JDBC connectivity to execute queries and retrieve results programmatically</li>
+            <li>Connected backend database operations to a graphical user interface for interactive data exploration</li>
+            <li>Designed queries with performance and scalability considerations in mind</li>
+          </ul>
+        </div>
+      </div>
 
-      <p>
-        TAMU Transit Voice is a voice-first web prototype designed to make the Texas A&amp;M bus
-        system accessible to low-vision and visually impaired students. The interface replaces the
-        existing map-based app with a single microphone button and spoken, AI-generated responses,
-        integrating the browser's Web Speech API for input and Speech Synthesis API for audio output,
-        backed by TAMU's OpenWebUI platform.
-      </p>
-
-      <ul>
-        <li>
-          Addressed a real accessibility gap in the TAMU bus app — which is built entirely around
-          a visual, map-based interface — by designing voice as the primary interaction model
-        </li>
-        <li>
-          Validated the concept through a structured usability study: participants completed
-          bus-related tasks significantly faster using the voice prototype than the original app
-        </li>
-        <li>
-          Users rated the system 5/5 for independent usability and 4.6/5 for ease of use
-          in post-study surveys
-        </li>
-        <li>
-          Demonstrated that a lightweight voice-first interface can meaningfully reduce cognitive
-          load for users who struggle with visual navigation
-        </li>
-      </ul>
-    </div>
-
-    <!-- PROFESSIONAL WEBSITE -->
-    <div class="project">
-      <h3>Professional Portfolio Website (This Website)</h3>
-      <p><em>HTML, CSS, JavaScript</em></p>
-
-      <p>
-        Designed and developed a personal portfolio website to present projects,
-        academic background, and technical skills in a clear and professional format.
-        The site serves as both a personal brand and a centralized showcase of work.
-      </p>
-
-      <ul>
-        <li>
-          Designed a recruiter-friendly layout with clear navigation and structured content
-        </li>
-        <li>
-          Implemented responsive design to ensure usability across desktop and mobile devices
-        </li>
-        <li>
-          Integrated dynamic UI components, including interactive carousels and animations
-        </li>
-        <li>
-          Structured the site for future extensibility and ongoing iteration
-        </li>
-      </ul>
-    </div>
-
-    <!-- GOOGLE DOCS ADD-ON -->
-    <div class="project">
-      <h3>Google Docs Add-on</h3>
-      <p><em>Google Apps Script, JavaScript, HTML</em></p>
-
-      <p>
-        Designed and developed a custom Google Docs sidebar add-on to streamline
-        document workflows and reduce repetitive manual tasks by consolidating
-        multiple utilities into a single interface.
-      </p>
-
-      <ul>
-        <li>
-          Integrated Google Drive and Gmail APIs to automate document saving,
-          emailing, and file management
-        </li>
-        <li>
-          Implemented Find & Replace functionality, digital signature insertion,
-          and document duplication features
-        </li>
-        <li>
-          Designed a clean and intuitive sidebar UI focused on usability
-          and workflow efficiency
-        </li>
-        <li>
-          Organized the codebase to support modular features and future expansion
-        </li>
-      </ul>
-    </div>
-
-    <!-- DATABASE DASHBOARD -->
-    <div class="project">
-      <h3>Database Analytics Dashboard</h3>
-      <p><em>SQL, Python, JDBC, MySQL (AdventureWorks)</em></p>
-
-      <p>
-        Developed an interactive analytics dashboard for exploring enterprise-scale
-        employee, department, and sales data using the AdventureWorks database.
-        The project emphasized database design, query optimization, and data analysis.
-      </p>
-
-      <ul>
-        <li>
-          Wrote complex SQL queries utilizing joins, subqueries, aggregation,
-          and filtering to extract meaningful insights
-        </li>
-        <li>
-          Implemented JDBC connectivity to execute queries and retrieve results
-          programmatically
-        </li>
-        <li>
-          Connected backend database operations to a graphical user interface
-          for interactive data exploration
-        </li>
-        <li>
-          Designed queries with performance and scalability considerations in mind
-        </li>
-      </ul>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section>
+  <section class="section-wide">
     <h2>Professional Experience</h2>
 
-    <div class="project">
-      <h3>Camp Eagle — Group Camp Counselor</h3>
-      <p><em>Leadership, Mentorship, Program Facilitation</em></p>
+    <div class="timeline">
 
-      <p>
-        Served as a Group Camp Counselor at Camp Eagle over three summers, supporting
-        a faith-based mission focused on Christ-like character development through
-        outdoor adventure, authentic relationships, and biblical truth. In this role,
-        I led middle and high school students through intentionally designed experiences
-        that combined physical challenge, relational growth, and spiritual formation.
-      </p>
+      <!-- BRAUM'S -->
+      <div class="timeline-item" data-accent="amber">
+        <div class="timeline-marker"></div>
+        <div class="timeline-body">
+          <span class="timeline-date">Mar 2018 – Mar 2021</span>
+          <h3>Braum's — Trainer and Crew Member</h3>
+          <p class="timeline-tags">Frisco, TX &middot; Customer Service, Food Safety, Training</p>
+          <p>
+            Worked as a crew member and trainer at Braum's throughout high school,
+            gaining an early foundation in customer service, food preparation, and
+            workplace responsibility across three years of consistent employment.
+          </p>
+          <ul class="timeline-list">
+            <li>Onboarded and trained over 50 new employees in efficient operational workflows and quality standards to drive team performance and service excellence</li>
+            <li>Rotated across multiple stations — front counter, food prep, and drive-thru — building versatility and reliability in a fast-paced environment</li>
+            <li>Maintained food safety and cleanliness standards in accordance with company and health code guidelines</li>
+            <li>Built a reputation for dependability, consistently taking on additional shifts and training responsibilities over three years</li>
+          </ul>
+        </div>
+        <div class="timeline-photo timeline-photo--logo">
+          <img src="images/braums.jpg" alt="Braum's logo">
+        </div>
+      </div>
 
-      <ul>
-        <li>
-          Led and supervised groups of students through high-energy outdoor activities
-          including rock climbing, hiking, and team-based challenge courses
-        </li>
-        <li>
-          Facilitated small group discussions and devotionals to encourage reflection,
-          discipleship, and faith-centered personal growth
-        </li>
-        <li>
-          Learned to approach leadership with flexibility as a strategy, adapting
-          plans, communication, and activities to meet the unique needs and dynamics
-          of each group
-        </li>
-        <li>
-          Prioritized camper safety, inclusion, and engagement while navigating
-          changing conditions and real-time challenges
-        </li>
-        <li>
-          Developed strong leadership, conflict resolution, and mentoring skills
-          within a dynamic and faith-driven environment
-        </li>
-      </ul>
+      <!-- RAISING CANE'S -->
+      <div class="timeline-item" data-accent="rose">
+        <div class="timeline-marker"></div>
+        <div class="timeline-body">
+          <span class="timeline-date">Jun 2021 – Jul 2022</span>
+          <h3>Raising Cane's — Trainer and Shift Manager</h3>
+          <p class="timeline-tags">Frisco, TX &middot; Team Leadership, Training, Operations</p>
+          <p>
+            Worked as a Shift Manager and certified trainer at Raising Cane's, overseeing
+            shift-level operations while training new hires on food safety, customer
+            service, and operational standards in a high-volume fast-casual environment.
+          </p>
+          <ul class="timeline-list">
+            <li>Directed weekly training and performance coaching for a 10-person team, ensuring consistent execution of standard work and high-quality production specifications</li>
+            <li>Managed shift-level operations including scheduling, inventory checks, and cash handling to keep the restaurant running smoothly during high-volume periods</li>
+            <li>Served as a certified trainer, onboarding new crew members on food safety protocols, POS systems, and customer service standards</li>
+            <li>Coordinated opening and closing procedures, ensuring compliance with health and safety regulations</li>
+          </ul>
+        </div>
+        <div class="timeline-photo timeline-photo--logo">
+          <img src="images/canes.jpg" alt="Raising Cane's logo">
+        </div>
+      </div>
+
+      <!-- CAMP EAGLE -->
+      <div class="timeline-item" data-accent="green">
+        <div class="timeline-marker"></div>
+        <div class="timeline-body">
+          <span class="timeline-date">May 2023 – Aug 2025</span>
+          <h3>Camp Eagle — Group Camp Counselor</h3>
+          <p class="timeline-tags">Leadership, Mentorship, Program Facilitation</p>
+          <p>
+            Served as a Group Camp Counselor at Camp Eagle over three summers, supporting
+            a faith-based mission focused on Christ-like character development through
+            outdoor adventure, authentic relationships, and biblical truth. In this role,
+            I led middle and high school students through intentionally designed experiences
+            that combined physical challenge, relational growth, and spiritual formation.
+          </p>
+          <ul class="timeline-list">
+            <li>Led and supervised groups of students through high-energy outdoor activities including rock climbing, hiking, and team-based challenge courses</li>
+            <li>Facilitated small group discussions and devotionals to encourage reflection, discipleship, and faith-centered personal growth</li>
+            <li>Learned to approach leadership with flexibility as a strategy, adapting plans, communication, and activities to meet the unique needs and dynamics of each group</li>
+            <li>Prioritized camper safety, inclusion, and engagement while navigating changing conditions and real-time challenges</li>
+            <li>Developed strong leadership, conflict resolution, and mentoring skills within a dynamic and faith-driven environment</li>
+          </ul>
+        </div>
+        <div class="timeline-photo timeline-photo--logo">
+          <img src="images/campeagle.jpg" alt="Camp Eagle logo">
+        </div>
+      </div>
+
     </div>
   </section>
 

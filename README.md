@@ -25,7 +25,6 @@ Personal portfolio site for Sutton Elliott, hosted on GitHub Pages.
 ├── style.css          # Global styles
 ├── animations.js      # Scroll and entrance animations
 ├── theme.js           # Theme utilities
-├── carousel.js        # Image carousel logic
 └── images/            # Project screenshots, backgrounds, resume PDF
 ```
 
