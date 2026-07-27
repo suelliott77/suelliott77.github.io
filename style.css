@@ -1637,6 +1637,21 @@ footer {
   cursor: default;
 }
 
+.skills-cta {
+  margin-top: 1.5rem;
+}
+
+.skills-cta a {
+  color: #4A8BDF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.skills-cta a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .skill-tag {
     opacity: 1;
