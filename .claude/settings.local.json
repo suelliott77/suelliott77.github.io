@@ -9,7 +9,12 @@
       "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" status)",
       "Bash(git -C \"c:/Users/sutto/OneDrive/Desktop/suelliott77.github.io\" add images/suit_closeup.jpg style.css)",
       "WebSearch",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(git status *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(awk '{print $5, $9}')"
     ]
   }
 }
